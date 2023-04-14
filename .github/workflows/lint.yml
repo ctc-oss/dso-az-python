@@ -1,0 +1,17 @@
+name: Code Linting
+on: [push]
+jobs:
+  lint:
+    name: Python Lint
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+      - uses: actions/checkout@v3
+      - name: pip install flake8 and black
+        run: pip install flake8 black
+      - name: flake8 lint
+        run: python3 -m flake8 --max-line-length 120 .
+      - name: black code format
+        run: python3 -m black -v --check .
