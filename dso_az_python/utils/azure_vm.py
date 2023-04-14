@@ -1,7 +1,7 @@
 import time
 from azure.identity import DefaultAzureCredential
 from azure.mgmt.compute import ComputeManagementClient
-from utils.env import SUBSCRIPTION_ID, RESOURCE_GROUP
+from dso_az_python.utils.env import SUBSCRIPTION_ID, RESOURCE_GROUP
 
 compute_client = ComputeManagementClient(
     credential=DefaultAzureCredential(),

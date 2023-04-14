@@ -1,4 +1,4 @@
-from utils import azure_vm
+from dso_az_python.utils import azure_vm
 import argparse
 
 
