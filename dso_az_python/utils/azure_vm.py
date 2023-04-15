@@ -26,7 +26,7 @@ def deallocate(vm_name):
     )
 
     while not power_off.done():
-        print("Powering off...")
+        print("Deallocating...")
         time.sleep(5)
 
     power_off.wait()
